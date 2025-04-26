@@ -1,0 +1,968 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-red {
+    color: #ed1c24;
+}
+
+.text-white{
+    color: #ffffff;
+}
+
+.btn {
+    margin-top: 40px;
+    display: inline-flex;
+    align-items: center;
+    background-color: #ed1c24;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Mona sans';
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #c51017;
+}
+
+.btn svg {
+    margin-left: 10px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.mobile-break {
+    display: none;
+}
+
+/* Header Styles */
+header {
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ed1c24;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.desktop-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.desktop-nav ul li {
+    margin-left: 30px;
+}
+
+.desktop-nav ul li a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.desktop-nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ed1c24;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Sidebar */
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: #111;
+    z-index: 1000;
+    transition: right 0.3s ease;
+    padding: 60px 30px;
+    overflow-y: auto;
+}
+
+.mobile-sidebar.active {
+    right: 0;
+}
+
+.sidebar-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.mobile-logo {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.mobile-logo img {
+    height: 50px;
+}
+
+.mobile-nav ul {
+    list-style: none;
+}
+
+.mobile-nav ul li {
+    margin-bottom: 20px;
+}
+
+.mobile-nav ul li a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav ul li a.active {
+    color: #ed1c24;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+    background: url('../assets/images/electric-guitar-still-life\ 1.png') left no-repeat;
+    background-size: 20%; 
+    background-position: left; 
+    background-position-y: 60px;
+    background-position-x: 250px;
+    margin-bottom: 50px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; 
+    max-width: 80%; 
+    text-align: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.hero-description {
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-bottom: 40px;
+}
+
+.hero-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.hero-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 5px;
+}
+
+.hero-indicator.active {
+    background-color: #ed1c24;
+}
+
+/* Why need license Section */
+.what-we-do {
+    background: linear-gradient(to right, #000 40%, #000 40%, #fff 40%, #fff 100%);
+    color: #000;
+    overflow: hidden;
+}
+
+.what-we-do-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.what-we-do-left {
+    width: 50%;
+    padding: 60px 0px 60px 0px;
+    justify-content: center;
+    align-items: right;
+    background: url('../assets/images/electric-guitar-still-life\ 1.png') left no-repeat;
+    background-size: 20%; 
+    background-position: left; 
+    background-position-y: 60px;
+    background-position-x: 250px;
+}
+
+.what-we-do-right {
+    width: 50%;
+    padding: 60px  0px 60px 0px;
+    color: #fff;
+}
+
+.what-we-do-right-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.what-we-do-left-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #000000;
+    text-align: start;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.why-we-need-license-card-holder {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.why-we-need-license-card {
+    width: 200px;
+    height: 250px;
+    border: #000000 solid 2px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.why-we-need-license-card p{
+    padding-top: 50px;
+    color: #000000;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: normal;
+    justify-content: center;
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #ffffff;
+    color: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-circle-1{
+    width: 200px;
+    height: 200px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.how-it-works::before {
+    content: "";
+    position: absolute;
+    top: 40px; 
+    left: 200px;
+    width: 450px;
+    height: 450px;
+    background-color: #d9d9d9; 
+    opacity: 26%;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.how-it-works::after {
+    content: "";
+    position: absolute;
+    top: 140px; 
+    left: 900px;
+    width: 450px;
+    height: 450px;
+    background-color: #d9d9d9; 
+    opacity: 26%;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.how-it-works-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.how-it-works-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.how-it-works-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    margin-bottom: 60px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #6C6E76;
+}
+
+
+.join-and-steps-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.step-circle {
+    width: 180px;
+    height: 180px;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+}
+
+.step-circle.red {
+    background-color: #ed1c24;
+}
+
+.step-number {
+    position: absolute;
+    top: 10px;
+    right: 75px;
+    width: 30px;
+    height: 30px;
+    background-color: #ed1c24;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border: 2px solid #fff; 
+}
+
+.step-title {
+    margin-top: 20px;
+    font-weight: normal;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.step-description {
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: lighter;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.join-circle {
+    width: 240px;
+    height: 240px;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.join-circle-text {
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.OIP-image {
+    position: absolute;
+    top: 120px; 
+    left: 15px;
+    width: 170px;
+    height: auto;
+    opacity: 100; 
+    pointer-events: none; 
+}
+
+.steps-btn {
+    display: inline-flex;
+    gap: 8px;
+    margin-top: 60px;
+    display: inline-flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: #111;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: 'Mona sans';
+    transition: all 0.3s ease;
+}
+
+.steps-btn:hover {
+    background-color: #c51017;
+}
+
+.steps-btn svg {
+    margin-left: 10px;
+}
+
+/* license types Section */
+.license-types {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+    margin-bottom: 0px;
+}
+
+
+
+.license-types-content {
+    position: relative;
+    z-index: 1; 
+    max-width: 80%; 
+    text-align: center;
+    justify-content: center;
+}
+
+.license-types-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #000000;
+}
+
+.license-types-description {
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-bottom: 40px;
+    font-weight: 500;
+    color: #6C6E76;
+}
+
+.license-types-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px; 
+    justify-items: center;
+    align-items: center;
+}
+
+.license-box {
+    background-color: #000000;
+    width: 600px;
+    height: 150px;
+    color: #ffffff;
+    padding: 30px;
+}
+
+.license-box h2{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-align: left;
+    font-weight: normal;
+}
+
+.license-box li{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-align: left;
+    font-size: 12px;
+    margin: 5px;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #666666;
+    text-decoration: none;
+    margin-right: 20px;
+    font-family: 'Inter';
+}
+
+.footer-social a {
+    color: #fff;
+    margin-left: 15px;
+    display: inline-block;
+}
+
+.copyright {
+    color: #666666;
+    text-decoration: none;
+    margin-right: 20px;
+    font-family: 'Inter';
+}
+
+@media screen and (min-width: 992px) {
+    .steps-container {
+        margin-left: 50px;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .hero {
+        background-size: 50%;
+        background-position-x: 40px;
+    }
+
+    .ellipse17 {
+        display: none;
+    }
+    
+    .what-we-do h2 {
+        font-size: 26px;
+    }
+    
+    .section-subtitle {
+        font-size: 14px;
+    }
+    
+    .about-left img {
+        max-height: 400px;
+    }
+}
+
+.service-list {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 992px) {
+    .service-list {
+        margin-left: 50px;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .ellipse17 {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .hero {
+        background-position: center;
+        background-size: cover;
+        padding-top: 60px;
+    }
+    
+    .hero-content {
+        padding-top: 60px;
+        max-width: 90%;
+    }
+    
+    .btn {
+        margin-top: 30px;
+    }
+    
+    .mobile-break {
+        display: block;
+        height: 0;
+    }
+    
+    .what-we-do {
+        background: none;
+        background-color: #fff;
+    }
+    
+    .what-we-do-container {
+        flex-direction: column;
+    }
+    
+    .what-we-do-left, .what-we-do-right {
+        width: 100%;
+        padding: 30px 20px;
+    }
+    
+    .what-we-do-right {
+        background-color: #000;
+    }
+    
+    .service-item-left {
+        text-align:end;
+        max-width: 100%;
+        justify-content: flex-end;
+    }
+    
+    .service-title-left {
+        text-align: right;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    
+    .circle-icon {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+    
+    .service-description-left {
+        text-align: right;
+        padding-left: 45px;
+        padding-right: 40px;
+    }
+
+    
+    
+    .how-it-works::before, .how-it-works::after {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .steps-container {
+        gap: 20px;
+    }
+    
+    .about {
+        flex-direction: column;
+        background: none;
+        min-height: auto;
+    }
+    
+    .about-left {
+        width: 100%;
+        background-color: #000;
+        padding: 50px 20px;
+    }
+    
+    .about-right {
+        width: 100%;
+        background-color: #fff;
+        padding: 50px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .ellipse17 {
+        display: none;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .section-subtitle {
+        font-size: 14px;
+    }
+    
+    .how-it-works::before {
+        left: -100px;
+    }
+    
+    .how-it-works::after {
+        left: 300px;
+    }
+    
+    .steps-container {
+        flex-direction: column;
+    }
+    
+    .join-circle {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .join-circle-text {
+        font-size: 12px;
+    }
+    
+    .OIP-image {
+        top: 90px;
+        width: 150px;
+    }
+    
+    .step-circle {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .step-number {
+        top: 20px;
+        right: 55px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .footer-links, .footer-social, .copyright {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo img {
+        height: 80px;
+    }
+
+    .ellipse17 {
+        display: none;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero {
+        min-height: 80vh;
+    }
+    
+    .hero-content {
+        padding-top: 80px;
+    }
+    
+    .hero-title {
+        font-size: 20px;
+    }
+    
+    .hero-description {
+        font-size: 12px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .section-title {
+        font-size: 20px;
+    }
+    
+    .how-it-works-title {
+        font-size: 24px;
+    }
+    
+    .how-it-works-subtitle {
+        font-size: 14px;
+    }
+    
+    .service-title, .service-title-left {
+        font-size: 14px;
+    }
+    
+    .service-description, .service-description-left {
+        font-size: 12px;
+    }
+
+    .service-description{
+        text-align: left;
+    }
+    
+    .about-title {
+        font-size: 24px;
+    }
+
+    
+    .about-description {
+        font-size: 14px;
+    }
+    
+    .about-btn {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+    
+    .how-it-works::before, .how-it-works::after {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .step {
+        width: 140px;
+    }
+    
+    .step-circle {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .step-number {
+        top: 25px;
+        right: 75px;
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+    
+    .join-circle {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .OIP-image {
+        top: 100px;
+        width: 140px;
+    }
+    
+    .steps-btn {
+        margin-top: 40px;
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
