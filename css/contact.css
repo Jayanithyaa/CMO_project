@@ -19,8 +19,8 @@ body.no-scroll {
 .container {
     width: 100%;
     max-width: 90%;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: 20px;
+    padding: 20px 20px 20px 20px;
 }
 
 .text-red {
