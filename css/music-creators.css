@@ -19,7 +19,7 @@ body {
 }
 
 .text-red {
-    color: #ed1c24;
+    color: #9d0405;
 }
 
 .text-white{
@@ -30,7 +30,7 @@ body {
     margin-top: 150px;
     display: inline-flex;
     align-items: center;
-    background-color: #ed1c24;
+    background-color: #9d0405;
     color: #fff;
     text-decoration: none;
     padding: 12px 25px;
@@ -42,7 +42,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #c51017;
+    background-color: #9d0405;
 }
 
 .btn svg {
@@ -73,7 +73,7 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #ed1c24;
+    color: #9d0405;
 }
 
 .logo img {
@@ -105,20 +105,20 @@ nav ul li a.active::after {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #ed1c24;
+    background-color: #9d0405;
 }
 
 /* Hero Section */
 .hero {
-    min-height: 120vh; 
+    min-height: 80vh; 
     display: flex;
     justify-content: center;
     align-items: center; 
     position:relative;
-    background: url('../assets/images/electric-guitar-still-life\ 1.png') left no-repeat;
+    background: url('../assets/images/young-man-black-leather-jacket-with-electric-guitar\ 1.png') left no-repeat;
     background-size: 400px; 
     background-position: left; 
-    background-position-y: 50px;
+    background-position-y: -90px;
     background-position-x: 180px;
     margin-bottom: 50px;
 }
@@ -420,7 +420,7 @@ nav ul li a.active::after {
 }
 
 .step-circle.red {
-    background-color: #ed1c24;
+    background-color: #9d0405;
 }
 
 .step-icon {
@@ -429,7 +429,7 @@ nav ul li a.active::after {
     right: 85px;
     width: 30px;
     height: 30px;
-    background-color: #ed1c24;
+    background-color: #9d0405;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -500,7 +500,7 @@ nav ul li a.active::after {
 }
 
 .steps-btn:hover {
-    background-color: #c51017;
+    background-color: #9d0405;
 }
 
 .steps-btn svg {

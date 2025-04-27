@@ -19,7 +19,7 @@
                 </div>
                 <nav class="desktop-nav">
                     <ul>
-                        <li><a href="about.html" class="active">About us</a></li>
+                        <li><a href="about.html" >About us</a></li>
                         <li><a href="music-creators.html">Music Creators</a></li>
                         <li><a href="music-licensing.html">Music Licensing</a></li>
                         <li><a href="contact.html">Contact us</a></li>
@@ -51,12 +51,12 @@
         <div class="hero-content">
             <h1 class="hero-title">Fair Royalties. Stronger Music Industry</h1>
             <p class="hero-description">We are dedicated to ensuring fair rights, royalties, and recognition for Sri Lankan music creators</p>
-            <a href="registration1.html" class="btn">
+            <!-- <a href="registration1.html" class="btn">
                 JOIN NOW
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </a>
+            </a> -->
 
             <div class="hero-indicators">
                 <div class="hero-indicator active"></div>
@@ -219,7 +219,7 @@
                   creative community by combating piracy and promoting ethical music usage. Through policy advocacy, legal support, and
                    industry collaboration, we empower music creators to thrive in a fair and sustainable environment.</p>
             
-            <a href="#" class="about-btn">
+            <a href="about.html" class="about-btn">
                 Learn More About Us
                 <img src="./assets/icons/Headphones_fill.svg" width="16" height="16" alt="Medium Icon">
             </a>
@@ -256,20 +256,37 @@
             './assets/images/artist-playing-guitar-stage 1.png'
         ];
 
-            document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function() {
             const heroSection = document.querySelector('.hero');
             const indicators = document.querySelectorAll('.hero-indicator');
-            
+            let currentIndex = 0;
+            let intervalId;
+
+            function setActiveImage(index) {
+                indicators.forEach(ind => ind.classList.remove('active'));
+                indicators[index].classList.add('active');
+                heroSection.style.backgroundImage = `url('${backgroundImages[index]}')`;
+                currentIndex = index;
+            }
+
             indicators.forEach((indicator, index) => {
                 indicator.addEventListener('click', function() {
-                indicators.forEach(ind => ind.classList.remove('active'));
-                
-                this.classList.add('active');
-                
-                heroSection.style.backgroundImage = `url('${backgroundImages[index]}')`;
+                    clearInterval(intervalId); 
+                    setActiveImage(index);
+                    startAutoSlide(); 
                 });
             });
-            });
+
+            function startAutoSlide() {
+                intervalId = setInterval(() => {
+                    let nextIndex = (currentIndex + 1) % backgroundImages.length;
+                    setActiveImage(nextIndex);
+                }, 3000); 
+            }
+
+            setActiveImage(0);
+            startAutoSlide();
+        });
 
         
         document.addEventListener('DOMContentLoaded', function() {
