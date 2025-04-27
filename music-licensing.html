@@ -14,7 +14,8 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="./assets/images/logo.png" alt="ACPJSL Logo">
+                    <a href="index.html">
+                    <img src="./assets/images/logo.png" alt="ACPJSL Logo"></a>
                 </div>
                 <nav class="desktop-nav">
                     <ul>
@@ -32,6 +33,19 @@
             </div>
         </div>
     </header>
+
+    <!-- Mobile Sidebar Menu -->
+    <div class="mobile-sidebar">
+        <div class="sidebar-close">&times;</div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="about.html" class="active">About us</a></li>
+                <li><a href="music-creators.html">Music Creators</a></li>
+                <li><a href="music-licensing.html">Music Licensing</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Mobile Sidebar Menu -->
     <div class="mobile-sidebar">
@@ -258,7 +272,6 @@
     </footer>
 
     <script>
-        // Mobile menu toggle functionality
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
             const mobileSidebar = document.querySelector('.mobile-sidebar');
