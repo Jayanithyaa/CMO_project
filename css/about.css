@@ -52,7 +52,7 @@ img {
   background-color: #c51017;
 }
 
-Decorative Rounds
+/* Decorative Rounds */
 .round {
   position: absolute;
   background-color: rgba(217, 217, 217, 0.2);
@@ -63,8 +63,9 @@ Decorative Rounds
 }
 
 .round-1 {
-  top: 1400px;
-  left: 624px;
+  top: 0px;
+  left: 4px;
+
 }
 
 .round-2 {
@@ -256,6 +257,18 @@ Decorative Rounds
 
 .left-side {
   position: relative;
+  background-image: url('../assets/images/violin.png');
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  height: 650px;
+}
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  .left-side {
+    height: 350px;
+    background-size: 50%;
+  }
 }
 
 .logo-img {
@@ -318,7 +331,7 @@ Decorative Rounds
 /* Mission Vision Section */
 .mission-vision {
   background-color: #fff;
-  padding: 200px 0;
+  padding: 200px 40px;
   position: relative;
   color: #fff;
 }
@@ -658,6 +671,10 @@ Decorative Rounds
   .right-side {
     background-color: #fff;
     padding: 50px 20px;
+  }
+
+  .mission-vision{
+    padding: 100px 40px;
   }
   
   /* Mission Vision Section */
