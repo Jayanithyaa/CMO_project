@@ -16,6 +16,11 @@ body.no-scroll {
     overflow: hidden;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
 .container {
     width: 100%;
     max-width: 90%;
@@ -24,7 +29,7 @@ body.no-scroll {
 }
 
 .text-red {
-    color: #ed1c24;
+    color: #9d0405;
 }
 
 .text-white{
@@ -35,7 +40,7 @@ body.no-scroll {
     margin-top: 40px;
     display: inline-flex;
     align-items: center;
-    background-color: #ed1c24;
+    background-color: #9d0405;
     color: #fff;
     text-decoration: none;
     padding: 12px 25px;
@@ -47,7 +52,7 @@ body.no-scroll {
 }
 
 .btn:hover {
-    background-color: #c51017;
+    background-color: #9d0405;
 }
 
 .btn svg {
@@ -57,6 +62,9 @@ body.no-scroll {
 section {
     padding: 60px 0;
 }
+
+
+
 
 .mobile-break {
     display: none;
@@ -83,7 +91,7 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #ed1c24;
+    color: #9d0405;
 }
 
 .logo img {
@@ -115,7 +123,7 @@ header {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #ed1c24;
+    background-color: #9d0405;
 }
 
 /* Mobile Menu Toggle */
@@ -195,7 +203,7 @@ header {
 }
 
 .mobile-nav ul li a.active {
-    color: #ed1c24;
+    color: #9d0405;
 }
 
 /* Hero Section */
@@ -205,7 +213,7 @@ header {
     justify-content: center;
     align-items: center; 
     position: relative;
-    background: url('../assets/images/electric-guitar-still-life\ 1.png') left no-repeat;
+    background: url('../assets/images/young-female-singer-red-dress\ 1.png') left no-repeat;
     background-size: 20%; 
     background-position: left; 
     background-position-y: 60px;
@@ -261,7 +269,7 @@ header {
 }
 
 .hero-indicator.active {
-    background-color: #9D0405;
+    background-color: #9d0405;
 }
 
 /* Why need license Section */
@@ -446,7 +454,7 @@ header {
 }
 
 .step-circle.red {
-    background-color: #9D0405;
+    background-color: #9d0405;
 }
 
 .step-number {
@@ -526,7 +534,7 @@ header {
 }
 
 .steps-btn:hover {
-    background-color: #9D0405;
+    background-color: #9d0405;
 }
 
 .steps-btn svg {
@@ -713,10 +721,9 @@ footer {
         height: 0;
     }
     
-    /* Why Need License Section - Mobile Responsive Layout */
     .what-we-do {
         background: none;
-        background-color: #000; /* Change to black first */
+        background-color: #000; 
     }
     
     .what-we-do-container {
@@ -731,11 +738,11 @@ footer {
     .what-we-do-right {
         background-color: #fff;
         color: #000;
-        order: 2; /* Change the order for mobile */
+        order: 2;
     }
     
     .what-we-do-left {
-        order: 1; /* Display black part first */
+        order: 1; 
         background-position: center;
         background-size: 40%;
         min-height: 300px;
@@ -777,9 +784,8 @@ footer {
         padding-right: 40px;
     }
     
-    /* License Types Section - Mobile Responsive */
     .license-types-grid {
-        grid-template-columns: 1fr; /* Change to single column */
+        grid-template-columns: 1fr; 
         gap: 20px;
     }
     
@@ -855,10 +861,9 @@ footer {
     
     .how-it-works::after {
         left: 300px;
-        opacity: 0.2; /* Make background circles more subtle on mobile */
+        opacity: 0.2; 
     }
     
-    /* How it works section - Mobile improvements */
     .join-and-steps-container {
         flex-direction: column;
     }
@@ -1009,13 +1014,13 @@ footer {
     }
     
     .step-circle {
-        width: 150px;
-        height: 150px;
+        width: 170px;
+        height: 170px;
     }
     
     .step-number {
-        top: 25px;
-        right: 60px;
+        top: 20px;
+        right: 70px;
         width: 25px;
         height: 25px;
         font-size: 12px;
@@ -1056,7 +1061,7 @@ footer {
     }
     
     .mobile-sidebar {
-        width: 85%; /* Make sidebar take more width on very small screens */
+        width: 85%; 
         right: -85%;
     }
 }
