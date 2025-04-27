@@ -16,20 +16,50 @@
             <div class="header-content">
                 <div class="logo">
                     <a href="index.html">
-                    <img src="./assets/images/logo.png" alt="ACPJSL Logo">
-                </a>
+                    <img src="./assets/images/logo.png" alt="ACPJSL Logo"></a>
                 </div>
-                <nav>
+                <nav class="desktop-nav">
                     <ul>
                         <li><a href="about.html" >About us</a></li>
-                        <li><a href="music-creators.html" class="active">Music Creators</a></li>
-                        <li><a href="music-licensing.html">Music Licensing</a></li>
+                        <li><a href="music-creators.html">Music Creators</a></li>
+                        <li><a href="music-licensing.html" class="active">Music Licensing</a></li>
                         <li><a href="contact.html">Contact us</a></li>
                     </ul>
                 </nav>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Sidebar Menu -->
+    <div class="mobile-sidebar">
+        <div class="sidebar-close">&times;</div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="about.html" >About us</a></li>
+                <li><a href="music-creators.html" class="active">Music Creators</a></li>
+                <li><a href="music-licensing.html">Music Licensing</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Mobile Sidebar Menu -->
+    <div class="mobile-sidebar">
+        <div class="sidebar-close">&times;</div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="about.html" class="active">About us</a></li>
+                <li><a href="music-creators.html">Music Creators</a></li>
+                <li><a href="music-licensing.html">Music Licensing</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <section class="hero">
             <div class="hero-content">
@@ -231,5 +261,24 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileSidebar = document.querySelector('.mobile-sidebar');
+            const sidebarClose = document.querySelector('.sidebar-close');
+            const body = document.body;
+
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileSidebar.classList.toggle('active');
+                body.classList.toggle('no-scroll');
+            });
+
+            sidebarClose.addEventListener('click', function() {
+                mobileSidebar.classList.remove('active');
+                body.classList.remove('no-scroll');
+            });
+        });
+    </script>
 </body>
 </html>
