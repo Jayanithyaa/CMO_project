@@ -213,7 +213,15 @@ header {
     margin-bottom: 50px;
 }
 
-
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+}
 
 .hero-content {
     position: relative;
@@ -284,7 +292,6 @@ header {
     width: 50%;
     padding: 60px  0px 60px 0px;
     color: #fff;
-    height: 100%;
 }
 
 .what-we-do-right-container{
@@ -709,7 +716,7 @@ footer {
     /* Why Need License Section - Mobile Responsive Layout */
     .what-we-do {
         background: none;
-        background-color: #fff; /* Change to black first */
+        background-color: #000; /* Change to black first */
     }
     
     .what-we-do-container {
@@ -718,18 +725,17 @@ footer {
     
     .what-we-do-left, .what-we-do-right {
         width: 100%;
-        padding: 0px 20px;
+        padding: 30px 20px;
     }
     
     .what-we-do-right {
         background-color: #fff;
         color: #000;
-        order: 2; 
+        order: 2; /* Change the order for mobile */
     }
     
     .what-we-do-left {
-        order: 1; 
-        display: none;
+        order: 1; /* Display black part first */
         background-position: center;
         background-size: 40%;
         min-height: 300px;
@@ -773,7 +779,7 @@ footer {
     
     /* License Types Section - Mobile Responsive */
     .license-types-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr; /* Change to single column */
         gap: 20px;
     }
     
@@ -849,7 +855,8 @@ footer {
     
     .how-it-works::after {
         left: 300px;
-        opacity: 0.2; 
+        opacity: 0.2; /* Make background circles more subtle on mobile */
+    }
     
     /* How it works section - Mobile improvements */
     .join-and-steps-container {
@@ -885,8 +892,8 @@ footer {
     }
     
     .step-circle {
-        width: 200px;
-        height: 200px;
+        width: 140px;
+        height: 140px;
     }
     
     .step-number {
@@ -994,25 +1001,16 @@ footer {
     
     /* Extra small devices */
     .steps-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column for very small screens */
     }
     
     .step {
         width: 140px;
     }
-
-    .step-number{
-        left: 75px;
-        bottom: 10px;
-    }
     
     .step-circle {
-        width: 180px;
-        height: 180px;
-    }
-
-    .step-title{
-        margin-top: 30px;
+        width: 150px;
+        height: 150px;
     }
     
     .step-number {
@@ -1024,13 +1022,13 @@ footer {
     }
     
     .join-circle {
-        width: 240px;
-        height: 240px;
+        width: 200px;
+        height: 200px;
     }
     
     .OIP-image {
-        top: 120px;
-        width: 200px;
+        top: 100px;
+        width: 140px;
     }
     
     .steps-btn {
@@ -1058,7 +1056,7 @@ footer {
     }
     
     .mobile-sidebar {
-        width: 85%; 
+        width: 85%; /* Make sidebar take more width on very small screens */
         right: -85%;
     }
-}}
+}
