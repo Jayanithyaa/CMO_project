@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACPOSL - Membership Information</title>
+    <link rel="stylesheet" href="./css/registration3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                    <img src="./assets/images/logo.png" alt="ACPJSL Logo"></a>
+                </div>
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="about.html" class="active">About us</a></li>
+                        <li><a href="music-creators.html">Music Creators</a></li>
+                        <li><a href="music-licensing.html">Music Licensing</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+     <!-- Mobile Sidebar Menu -->
+     <div class="mobile-sidebar">
+        <div class="sidebar-close">&times;</div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="about.html" class="active">About us</a></li>
+                <li><a href="music-creators.html">Music Creators</a></li>
+                <li><a href="music-licensing.html">Music Licensing</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="container">
+        <div class="form-container">
+            <!-- Progress bar -->
+            <div class="progress-bar">
+                <div class="progress-step">
+                    <div class="step-circle completed"><img src="./assets/icons/Indicator Icons.png" alt="indicator icon"></div>
+                    <div class="step-title1">Personal<br/> Information</div>
+                </div>
+                <div class="progress-step">
+                    <div class="step-circle completed"><img src="./assets/icons/Indicator Icons.png" alt="indicator icon">
+                   </div>
+                    <div class="step-title2">Personal <br/>Information 02</div>
+                </div>
+                <div class="progress-step">
+                    <div class="step-circle active">3</div>
+                    <div class="step-title">Membership <br/>Information</div>
+                </div>
+                <div class="progress-step">
+                    <div class="step-circle">4</div>
+                    <div class="step-title">Member Rights</div>
+                </div>
+                <!-- Progress connector line -->
+                <div class="progress-connector" style="width: 75%;"></div>
+            </div>
+
+            <h1 class="form-title">Membership Information</h1>
+            <p class="form-subtitle">Enter Membership Information</p>
+
+            <form>
+                <div class="form-group">
+                    <label>Are you represent someone else?</label>
+                    <div class="radio-option-container">
+                    <div class="radio-option">
+                        <input type="radio" id="yes" name="represent" checked>
+                        <label for="yes">Yes</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="no" name="represent">
+                        <label for="no">No</label>
+                    </div>
+                </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="Who?">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="Relationship with that person?">
+                </div>
+
+                <div class="form-group">
+                    <label>Application Category</label>
+                    <div class="radio-option">
+                        <input type="radio" id="author" name="category" checked>
+                        <label for="author">Author</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="music-writer" name="category">
+                        <label for="music-writer">Music writer</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="publications" name="category">
+                        <label for="publications">Publications</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="other" name="category">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">NEXT</button>
+            </form>
+        </div>
+    </div>
+
+    <script>      
+        document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileSidebar = document.querySelector('.mobile-sidebar');
+        const sidebarClose = document.querySelector('.sidebar-close');
+        const body = document.body;
+
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileSidebar.classList.toggle('active');
+            body.classList.toggle('no-scroll');
+        });
+
+        sidebarClose.addEventListener('click', function() {
+            mobileSidebar.classList.remove('active');
+            body.classList.remove('no-scroll');
+        });
+    });</script>
+
+</body>
+</html>
