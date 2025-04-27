@@ -4,225 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACPJSL - Contact Us</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #fff;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header Styles */
-        header {
-            padding: 20px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #b01e23;
-        }
-
-        .logo img {
-            height: 40px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 30px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            position: relative;
-        }
-
-        nav ul li a.active::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: #ed1c24;
-        }
-
-        /* Main Content Styles */
-        .main-content {
-            padding: 60px 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 40px;
-        }
-
-        .left-section {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .right-section {
-            flex: 1;
-            min-width: 300px;
-            background-color: #f9f9f9;
-            padding: 30px;
-            border-radius: 5px;
-        }
-
-        .heading {
-            font-size: 42px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .subheading {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .highlight {
-            color: #ed1c24;
-        }
-
-        .contact-info {
-            margin-top: 40px;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            border: 1px solid #ddd;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
-
-        .info-icon {
-            background-color: #000;
-            color: #fff;
-            padding: 10px;
-            margin-right: 15px;
-            border-radius: 5px;
-        }
-
-        /* Form Styles */
-        .form-title {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .form-subtitle {
-            font-size: 14px;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-row {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-        textarea {
-            height: 120px;
-            resize: none;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background-color: #ed1c24;
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        .submit-btn:hover {
-            background-color: #d01c22;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .main-content {
-                flex-direction: column;
-            }
-
-            .form-row {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav ul {
-                display: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="https://via.placeholder.com/120x40/b01e23/ffffff?text=ACPJSL" alt="ACPJSL Logo">
+                    <a href="index.html">
+                    <img src="./assets/images/logo.png" alt="ACPJSL Logo"></a>
                 </div>
-                <nav>
+                <nav class="desktop-nav">
                     <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Music Creators</a></li>
-                        <li><a href="#">Music Licensing</a></li>
-                        <li><a href="#" class="active">Contact us</a></li>
+                        <li><a href="about.html" class="active">About us</a></li>
+                        <li><a href="music-creators.html">Music Creators</a></li>
+                        <li><a href="music-licensing.html">Music Licensing</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
                     </ul>
                 </nav>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </header>
 
+     <!-- Mobile Sidebar Menu -->
+     <div class="mobile-sidebar">
+        <div class="sidebar-close">&times;</div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="about.html" class="active">About us</a></li>
+                <li><a href="music-creators.html">Music Creators</a></li>
+                <li><a href="music-licensing.html">Music Licensing</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <div class="container">
         <div class="main-content">
             <div class="left-section">
-                <h1 class="heading">Get in touch : we're here to <span class="highlight">answer</span> your <span class="highlight">questions</span></h1>
+                <h1 class="heading">Get in touch : we're <br/>here to <span class="highlight">answer</span> your <span class="highlight">questions</span></h1>
                 
                 <div class="contact-info">
                     <div class="info-item">
@@ -267,5 +93,23 @@
             </div>
         </div>
     </div>
+
+    <script>      
+        document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileSidebar = document.querySelector('.mobile-sidebar');
+        const sidebarClose = document.querySelector('.sidebar-close');
+        const body = document.body;
+
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileSidebar.classList.toggle('active');
+            body.classList.toggle('no-scroll');
+        });
+
+        sidebarClose.addEventListener('click', function() {
+            mobileSidebar.classList.remove('active');
+            body.classList.remove('no-scroll');
+        });
+    });</script>
 </body>
 </html>
