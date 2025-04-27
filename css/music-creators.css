@@ -9,6 +9,11 @@ body {
     background-color: #000;
     color: #fff;
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
 
 .container {
@@ -62,7 +67,7 @@ header {
     z-index: 100;
     padding: 10px 0;
     background-color: #000000;
-  }
+}
 
 .header-content {
     display: flex;
@@ -74,31 +79,57 @@ header {
     font-size: 24px;
     font-weight: bold;
     color: #9d0405;
+    z-index: 101;
 }
 
 .logo img {
     height: 100px;
 }
 
-nav ul {
+/* Mobile menu button */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Navigation */
+.desktop-nav {
+    transition: all 0.3s ease;
+}
+
+.desktop-nav ul {
     display: flex;
     list-style: none;
 }
 
-nav ul li {
+.desktop-nav ul li {
     margin-left: 30px;
 }
 
-nav ul li a {
+.desktop-nav ul li a {
     font-family: 'Plus Jakarta Sans', sans-serif;
     text-decoration: none;
     color: #fff;
     font-weight: 500;
     position: relative;
     padding-bottom: 5px;
+    transition: all 0.3s ease;
 }
 
-nav ul li a.active::after {
+.desktop-nav ul li a.active::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -108,13 +139,66 @@ nav ul li a.active::after {
     background-color: #9d0405;
 }
 
+/* Mobile Sidebar */
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #111;
+    z-index: 1000;
+    padding: 60px 30px 30px;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-sidebar.active {
+    right: 0;
+}
+
+.mobile-sidebar .sidebar-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.mobile-nav ul li {
+    margin: 15px 0;
+}
+
+.mobile-nav ul li a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    padding: 10px 0;
+    position: relative;
+}
+
+.mobile-nav ul li a.active {
+    color: #9d0405;
+}
+
 /* Hero Section */
 .hero {
     min-height: 80vh; 
     display: flex;
     justify-content: center;
     align-items: center; 
-    position:relative;
+    position: relative;
     background: url('../assets/images/young-man-black-leather-jacket-with-electric-guitar\ 1.png') left no-repeat;
     background-size: 400px; 
     background-position: left; 
@@ -155,9 +239,6 @@ nav ul li a.active::after {
     font-family: 'Plus Jakarta Sans', sans-serif;
     margin-bottom: 40px;
 }
-
-
-
 
 /* roles */
 .roles {
@@ -229,8 +310,6 @@ nav ul li a.active::after {
     border: 1px solid #333;
 }
 
-
-
 .role-title {
     font-size: 16px;
     font-weight: bold;
@@ -297,26 +376,6 @@ nav ul li a.active::after {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive Styles */
-@media (max-width: 992px) {
-    .roles {
-        background: linear-gradient(to bottom, #000 50%, #fff 50%);
-    }
-    
-    .roles-container {
-        flex-direction: column;
-    }
-    
-    .roles-left, .roles-right {
-        width: 100%;
-        padding: 40px 20px;
-    }
-    
-    .role-card {
-        max-width: 100%;
-    }
-}
-
 /* How It Works Section */
 .how-it-works {
     padding-top: 150px;
@@ -325,9 +384,8 @@ nav ul li a.active::after {
     color: #000;
     padding: 50px 0;
     position: relative;
-    overflow:visible;
+    overflow: visible;
 }
-
 
 .how-it-works::before {
     content: "";
@@ -380,7 +438,7 @@ nav ul li a.active::after {
     color: #6C6E76;
 }
 
-.how-it-works-container{
+.how-it-works-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -449,7 +507,7 @@ nav ul li a.active::after {
 .step-description {
     font-size: 12px;
     margin-top: 5px;
-    font-weight:lighter;
+    font-weight: lighter;
     text-align: center;
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
@@ -480,7 +538,7 @@ nav ul li a.active::after {
     height: auto;
     opacity: 100; 
     pointer-events: none; 
-  }
+}
 
 .steps-btn {
     display: inline-flex;
@@ -493,7 +551,7 @@ nav ul li a.active::after {
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 30px;
-    font-weight:normal;
+    font-weight: normal;
     font-size: 14px;
     font-family: 'Mona sans';
     transition: all 0.3s ease;
@@ -517,9 +575,8 @@ nav ul li a.active::after {
     color: #000;
     padding: 50px 0;
     position: relative;
-    overflow:visible;
+    overflow: visible;
 }
-
 
 .rights-content {
     margin-top: 100px;
@@ -549,7 +606,7 @@ nav ul li a.active::after {
     color: #6C6E76;
 }
 
-.rights-container{
+.rights-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -575,7 +632,7 @@ nav ul li a.active::after {
     position: relative;
 }
 
-.right-content{
+.right-content {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -623,60 +680,190 @@ footer {
 }
 
 /* Responsive Styles */
+@media (max-width: 1200px) {
+    .how-it-works::before,
+    .how-it-works::after {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .how-it-works::before {
+        left: 50px;
+    }
+    
+    .how-it-works::after {
+        left: 700px;
+    }
+}
+
 @media (max-width: 992px) {
-    .what-we-do {
-        flex-direction: column;
-        background: #fff;
+    /* Roles section */
+    .roles {
+        background: linear-gradient(to bottom, #000 50%, #fff 50%);
     }
-
-    .what-we-do-left, .what-we-do-right {
+    
+    .roles-container {
+        flex-direction: column;
+    }
+    
+    .roles-left, .roles-right {
         width: 100%;
         padding: 40px 20px;
     }
-
-    .what-we-do-right {
-        background-color: #000;
+    
+    .roles-list {
+        justify-content: center;
     }
-
-    .about {
+    
+    .role-card-1, .role-card-2 {
+        max-width: 100%;
+    }
+    
+    /* How it works section */
+    .how-it-works::before {
+        left: 20px;
+        top: 20px;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .how-it-works::after {
+        left: auto;
+        right: 20px;
+        top: auto;
+        bottom: 20px;
+        width: 200px;
+        height: 200px;
+    }
+    
+    /* Rights section */
+    .rights-container {
         flex-direction: column;
-        background: #fff;
-    }
-
-    .about-left, .about-right {
-        width: 100%;
-    }
-
-    .about-left {
-        height: 400px;
-        background-color: #000;
-    }
-
-    .about-right {
-        padding: 40px 20px;
+        gap: 30px;
     }
 }
 
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 36px;
+    /* Header & Navigation */
+    .mobile-menu-toggle {
+        display: flex;
+        cursor: pointer;
     }
-
-    .section-title {
-        font-size: 28px;
-    }
-
-    nav ul {
+    
+    .desktop-nav {
         display: none;
     }
-
+    
+    /* Mobile sidebar visibility */
+    .mobile-sidebar {
+        display: block;
+    }
+    
+    /* Hero section */
+    .hero {
+        background-position: center -50px;
+        background-size: 300px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-description {
+        font-size: 14px;
+    }
+    
+    /* Roles section */
+    .roles-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .role-card-1, .role-card-2 {
+        max-width: 280px;
+        max-height: none;
+    }
+    
+    /* How it works section */
+    .how-it-works-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
     .steps-container {
         flex-direction: column;
-        gap: 30px;
+        gap: 40px;
     }
 
+    /* Footer */
     .footer-content {
         flex-direction: column;
         gap: 20px;
+        text-align: center;
+    }
+    
+    .footer-links, .footer-social {
+        margin-bottom: 15px;
+    }
+    
+    .footer-links a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .logo img {
+        height: 70px;
+    }
+    
+    .hero-content {
+        max-width: 90%;
+    }
+    
+    .right-holder {
+        width: 250px;
+    }
+    
+    .right-title {
+        font-size: 16px;
+    }
+    
+    .step-circle {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .step-icon {
+        right: 70px;
+        margin-bottom: 10px;
+    }
+    
+    .join-circle {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .OIP-image {
+        width: 150px;
+        top: 100px;
+    }
+    
+    .how-it-works-title {
+        font-size: 28px;
+    }
+    
+    .rights-title {
+        font-size: 28px;
+    }
+    
+    .rights-content {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
