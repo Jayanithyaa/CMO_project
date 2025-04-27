@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACPOSL - Membership Information</title>
+    <link rel="stylesheet" href="./css/registration4.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                    <img src="./assets/images/logo.png" alt="ACPJSL Logo"></a>
+                </div>
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="about.html" class="active">About us</a></li>
+                        <li><a href="music-creators.html">Music Creators</a></li>
+                        <li><a href="music-licensing.html">Music Licensing</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+     <!-- Mobile Sidebar Menu -->
+     <div class="mobile-sidebar">
+        <div class="sidebar-close">&times;</div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="about.html" class="active">About us</a></li>
+                <li><a href="music-creators.html">Music Creators</a></li>
+                <li><a href="music-licensing.html">Music Licensing</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="container">
+        <div class="form-container">
+            <!-- Progress bar -->
+            <div class="progress-bar">
+                <div class="progress-step">
+                    <div class="step-circle completed"><img src="./assets/icons/Indicator Icons.png" alt="indicator icon"></div>
+                    <div class="step-title-completed">Personal<br/> Information</div>
+                </div>
+                <div class="progress-step">
+                    <div class="step-circle completed"><img src="./assets/icons/Indicator Icons.png" alt="indicator icon">
+                   </div>
+                    <div class="step-title-completed">Personal <br/>Information 02</div>
+                </div>
+                <div class="progress-step">
+                    <div class="step-circle completed"><img src="./assets/icons/Indicator Icons.png" alt="indicator icon"></div>
+                    <div class="step-title-completed">Membership <br/>Information</div>
+                </div>
+                <div class="progress-step">
+                    <div class="step-circle active">4</div>
+                    <div class="step-title">Member Rights</div>
+                </div>
+                <!-- Progress connector line -->
+                <div class="progress-connector" style="width: 75%;"></div>
+            </div>
+
+            <h1 class="form-title">Membership Rights</h1>
+            <p class="form-subtitle">Member Rights</p>
+
+            <form>
+                <div class="form-group">
+                    <label class="label-question">Are you currently a member of another Creators and Publishers  association? 
+                        (anywhere in the world) If yes please provide details</label>
+                    <div class="radio-option-container">
+                    <div class="radio-option">
+                        <input type="radio" id="yes" name="represent" checked>
+                        <label for="yes">Yes</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="no" name="represent">
+                        <label for="no">No</label>
+                    </div>
+                </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="Details?">
+                </div>
+
+                <div class="form-group">
+                    <label class="label-question">Would you like to exclude certain countries from the purview of the Association Of
+                     Creators and Publishers Of Sri Lanka
+                    to administer your rights?</label>
+                    <div class="radio-option-container">
+                    <div class="radio-option">
+                        <input type="radio" id="yes" name="represent" checked>
+                        <label for="yes">Yes</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="no" name="represent">
+                        <label for="no">No</label>
+                    </div>
+                </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="What countries would you like to exclude?">
+                </div>
+
+                
+
+                <button type="submit" class="submit-btn">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+
+    <script>      
+        document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileSidebar = document.querySelector('.mobile-sidebar');
+        const sidebarClose = document.querySelector('.sidebar-close');
+        const body = document.body;
+
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileSidebar.classList.toggle('active');
+            body.classList.toggle('no-scroll');
+        });
+
+        sidebarClose.addEventListener('click', function() {
+            mobileSidebar.classList.remove('active');
+            body.classList.remove('no-scroll');
+        });
+    });</script>
+
+</body>
+</html>
