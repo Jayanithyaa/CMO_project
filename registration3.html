@@ -52,12 +52,12 @@
             <div class="progress-bar">
                 <div class="progress-step">
                     <div class="step-circle completed"><img src="./assets/icons/Indicator Icons.png" alt="indicator icon"></div>
-                    <div class="step-title1">Personal<br/> Information</div>
+                    <div class="step-title-completed">Personal<br/> Information</div>
                 </div>
                 <div class="progress-step">
                     <div class="step-circle completed"><img src="./assets/icons/Indicator Icons.png" alt="indicator icon">
                    </div>
-                    <div class="step-title2">Personal <br/>Information 02</div>
+                    <div class="step-title-completed">Personal <br/>Information 02</div>
                 </div>
                 <div class="progress-step">
                     <div class="step-circle active">3</div>
@@ -76,7 +76,7 @@
 
             <form>
                 <div class="form-group">
-                    <label>Are you represent someone else?</label>
+                    <label class="label-question">Are you represent someone else?</label>
                     <div class="radio-option-container">
                     <div class="radio-option">
                         <input type="radio" id="yes" name="represent" checked>
@@ -98,7 +98,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Application Category</label>
+                    <label class="label-question">Application Category</label>
                     <div class="radio-option">
                         <input type="radio" id="author" name="category" checked>
                         <label for="author">Author</label>
@@ -116,8 +116,8 @@
                         <label for="other">Other</label>
                     </div>
                 </div>
-
-                <button type="submit" class="submit-btn">NEXT</button>
+                
+                <button type="button" class="submit-btn" onclick="window.location.href='registration4.html'">NEXT</button>
             </form>
         </div>
     </div>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACPOSL - Membership Information</title>
+    <link rel="stylesheet" href="./css/registration1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                    <img src="./assets/images/logo.png" alt="ACPJSL Logo"></a>
+                </div>
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="about.html" class="active">About us</a></li>
+                        <li><a href="music-creators.html">Music Creators</a></li>
+                        <li><a href="music-licensing.html">Music Licensing</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+     <!-- Mobile Sidebar Menu -->
+     <div class="mobile-sidebar">
+        <div class="sidebar-close">&times;</div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="about.html" class="active">About us</a></li>
+                <li><a href="music-creators.html">Music Creators</a></li>
+                <li><a href="music-licensing.html">Music Licensing</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="container">
+        <div class="form-container">
+            <!-- Progress bar -->
+            <div class="progress-bar">
+                <div class="progress-step">
+                    <div class="step-circle active">1</div>
+                    <div class="step-title">Personal<br/> Information</div>
+                </div>
+                <div class="progress-step">
+                    <div class="step-circle">2
+                   </div>
+                    <div class="step-title">Personal <br/>Information 02</div>
+                </div>
+                <div class="progress-step">
+                    <div class="step-circle">3</div>
+                    <div class="step-title">Membership <br/>Information</div>
+                </div>
+                <div class="progress-step">
+                    <div class="step-circle">4</div>
+                    <div class="step-title">Member Rights</div>
+                </div>
+                <!-- Progress connector line -->
+                <div class="progress-connector" style="width: 75%;"></div>
+            </div>
+
+            <h1 class="form-title">Personal Infromation</h1>
+            <p class="form-subtitle">Enter Your Personal Details</p>
+
+            
+
+                <div class="form-group">
+                    <input type="text" placeholder="Membership number">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="First name">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="Last name">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="Address">
+                </div>
+
+                <div class="form-group" id="telephone-container">
+                    <div class="telephone-item">
+                        <input type="text" placeholder="Telephone number">
+                        <button type="button" class="add-btn">+</button>
+                    </div>
+                </div>
+                
+                  
+                
+
+                <div class="form-group">
+                    <input type="text" placeholder="Email">
+                </div>
+                
+
+                <button type="button" class="submit-btn" onclick="window.location.href='registration2.html'">NEXT</button>
+            </form>
+        </div>
+    </div>
+
+    <script>   
+        
+        // Get the container where telephone inputs are added
+        const telephoneContainer = document.getElementById('telephone-container');
+
+        // Get the first telephone input item
+        const firstTelephoneItem = telephoneContainer.querySelector('.telephone-item');
+
+        // Attach event listener to the "plus" button
+        telephoneContainer.addEventListener('click', function(event) {
+        if (event.target && event.target.classList.contains('add-btn')) {
+            // Create a new input item div
+            const newTelephoneItem = document.createElement('div');
+            newTelephoneItem.classList.add('telephone-item');
+            
+            // Create a new input and add it to the new div
+            const newInput = document.createElement('input');
+            newInput.type = 'text';
+            newInput.placeholder = 'Telephone number';
+            
+            // Create a new plus button for the new input
+            const newButton = document.createElement('button');
+            newButton.type = 'button';
+            newButton.classList.add('add-btn');
+            newButton.textContent = '+';
+            
+            // Append the input and button to the new div
+            newTelephoneItem.appendChild(newInput);
+            newTelephoneItem.appendChild(newButton);
+            
+            // Append the new div to the container
+            telephoneContainer.appendChild(newTelephoneItem);
+        }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileSidebar = document.querySelector('.mobile-sidebar');
+        const sidebarClose = document.querySelector('.sidebar-close');
+        const body = document.body;
+
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileSidebar.classList.toggle('active');
+            body.classList.toggle('no-scroll');
+        });
+
+        sidebarClose.addEventListener('click', function() {
+            mobileSidebar.classList.remove('active');
+            body.classList.remove('no-scroll');
+        });
+    });</script>
+
+</body>
+</html>
