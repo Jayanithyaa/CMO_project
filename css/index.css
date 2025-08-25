@@ -531,8 +531,8 @@ header {
 }
 
 .step-circle {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     background-color: #000;
     border-radius: 50%;
     display: flex;
@@ -640,6 +640,7 @@ header {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    position: relative;
 }
 
 .about-left {
@@ -648,6 +649,7 @@ header {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .about-left img {
@@ -657,6 +659,29 @@ header {
     height: auto !important;
     opacity: 1 !important;
     filter: none !important;
+}
+
+.about-circle {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    z-index: 2;
+}
+
+.about-center-circle {
+    width: 160px;
+    height: 160px;
+    border: 2px solid #9d0405;
+    border-radius: 50%;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .about-right {
@@ -952,6 +977,20 @@ footer {
         max-height: 450px !important;
     }
     
+    .about-circle {
+        width: 100px;
+        height: 100px;
+        top: 30px;
+        left: 50px;
+    }
+    
+    .about-center-circle {
+        width: 140px;
+        height: 140px;
+        border-width: 2px;
+        top: 65%;
+    }
+    
     .about-title {
         font-size: 30px;
     }
@@ -1012,9 +1051,35 @@ footer {
         left: 300px;
     }
     
+    .join-and-steps-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
     .steps-container {
         flex-direction: column;
         gap: 30px;
+        order: 2;
+    }
+    
+    .join-and-steps-container .step:first-child {
+        order: 1;
+    }
+    
+    .steps-container .step:nth-child(1) {
+        order: 2;
+    }
+    
+    .steps-container .step:nth-child(2) {
+        order: 3;
+    }
+    
+    .steps-container .step:nth-child(3) {
+        order: 4;
+    }
+    
+    .steps-container .step:nth-child(4) {
+        order: 5;
     }
     
     .join-circle {
@@ -1047,6 +1112,20 @@ footer {
     
     .about-left img {
         max-height: 400px !important;
+    }
+    
+    .about-center-circle {
+        width: 120px;
+        height: 120px;
+        border-width: 2px;
+        top: 65%;
+    }
+    
+    .about-circle {
+        width: 80px;
+        height: 80px;
+        top: 20px;
+        left: 30px;
     }
     
     .about-title {
@@ -1140,6 +1219,37 @@ footer {
     .service-description, .service-description-left {
         font-size: 12px;
     }
+    
+    .join-and-steps-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .steps-container {
+        flex-direction: column;
+        gap: 25px;
+        order: 2;
+    }
+    
+    .join-and-steps-container .step:first-child {
+        order: 1;
+    }
+    
+    .steps-container .step:nth-child(1) {
+        order: 2;
+    }
+    
+    .steps-container .step:nth-child(2) {
+        order: 3;
+    }
+    
+    .steps-container .step:nth-child(3) {
+        order: 4;
+    }
+    
+    .steps-container .step:nth-child(4) {
+        order: 5;
+    }
 
     .service-description{
         text-align: left;
@@ -1169,8 +1279,8 @@ footer {
     }
     
     .step-circle {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
     }
     
     .step-number {
@@ -1245,12 +1355,51 @@ footer {
     }
     
     .about-description {
-        font-size: 12px;
+        font-size: 11px;
+    }
+    
+    .about-circle {
+        display: none;
+    }
+    
+    .about-center-circle {
+        display: none;
+    }
+    
+    .join-and-steps-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .steps-container {
+        flex-direction: column;
+        gap: 20px;
+        order: 2;
+    }
+    
+    .join-and-steps-container .step:first-child {
+        order: 1;
+    }
+    
+    .steps-container .step:nth-child(1) {
+        order: 2;
+    }
+    
+    .steps-container .step:nth-child(2) {
+        order: 3;
+    }
+    
+    .steps-container .step:nth-child(3) {
+        order: 4;
+    }
+    
+    .steps-container .step:nth-child(4) {
+        order: 5;
     }
     
     .step-circle {
-        width: 160px;
-        height: 160px;
+        width: 180px;
+        height: 180px;
     }
     
     .step-number {
@@ -1355,16 +1504,16 @@ footer {
     }
     
     .step-circle {
-        width: 140px;
-        height: 140px;
+        width: 160px;
+        height: 160px;
     }
     
     .step-number {
-        top: 15px;
-        right: 55px;
-        width: 20px;
-        height: 20px;
-        font-size: 10px;
+        top: 20px;
+        right: 65px;
+        width: 22px;
+        height: 22px;
+        font-size: 11px;
     }
     
     .join-circle {

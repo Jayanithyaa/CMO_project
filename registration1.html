@@ -38,10 +38,11 @@
         <div class="sidebar-close">&times;</div>
         <nav class="mobile-nav">
             <ul>
-                <li><a href="about.html" class="active">About us</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
                 <li><a href="music-creators.html">Music Creators</a></li>
                 <li><a href="music-licensing.html">Music Licensing</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="contact.html">Contact us</a></li>
             </ul>
         </nav>
     </div>
@@ -93,11 +94,12 @@
                     <input type="text" placeholder="Address">
                 </div>
 
-                <div class="form-group" id="telephone-container">
-                    <div class="telephone-item">
-                        <input type="text" placeholder="Telephone number">
-                        <button type="button" class="add-btn">+</button>
-                    </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Contact Number">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="Additional Number">
                 </div>
                 
                   
@@ -114,40 +116,6 @@
     </div>
 
     <script>   
-        
-        // Get the container where telephone inputs are added
-        const telephoneContainer = document.getElementById('telephone-container');
-
-        // Get the first telephone input item
-        const firstTelephoneItem = telephoneContainer.querySelector('.telephone-item');
-
-        // Attach event listener to the "plus" button
-        telephoneContainer.addEventListener('click', function(event) {
-        if (event.target && event.target.classList.contains('add-btn')) {
-            // Create a new input item div
-            const newTelephoneItem = document.createElement('div');
-            newTelephoneItem.classList.add('telephone-item');
-            
-            // Create a new input and add it to the new div
-            const newInput = document.createElement('input');
-            newInput.type = 'text';
-            newInput.placeholder = 'Telephone number';
-            
-            // Create a new plus button for the new input
-            const newButton = document.createElement('button');
-            newButton.type = 'button';
-            newButton.classList.add('add-btn');
-            newButton.textContent = '+';
-            
-            // Append the input and button to the new div
-            newTelephoneItem.appendChild(newInput);
-            newTelephoneItem.appendChild(newButton);
-            
-            // Append the new div to the container
-            telephoneContainer.appendChild(newTelephoneItem);
-        }
-        });
-
         document.addEventListener('DOMContentLoaded', function() {
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         const mobileSidebar = document.querySelector('.mobile-sidebar');
