@@ -74,6 +74,7 @@ header {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
+  font-size: 14px;
   position: relative;
   padding-bottom: 5px;
 }
@@ -158,7 +159,7 @@ header {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   display: block;
   padding: 8px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -363,7 +364,7 @@ header {
 
 .left-side {
   position: relative;
-  background-image: url('../assets/images/violin.png');
+  background-image: url('../assets/images/antique-wooden-gramophone-with-large-horn-vintage-music-player-old-record-player-nostalgic-sound-system-classic-audio-device-retro-design-beautiful-craftsmanship 1.png');
   background-position: right bottom;
   background-repeat: no-repeat;
   height: 650px;
@@ -391,7 +392,7 @@ header {
 
 .right-content h2 {
   color: #000;
-  font-size: 2.5rem;
+  font-size: 36px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: 700;
@@ -399,7 +400,7 @@ header {
 
 .right-content p {
   color: #000;
-  font-size: 1.125rem;
+  font-size: 16px;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -453,13 +454,13 @@ header {
 }
 
 .mission-content h3, .vision-content h3 {
-  font-size: 2rem;
+  font-size: 30px;
   margin-bottom: 30px;
   text-align: center;
 }
 
 .mission-content p, .vision-content p {
-  font-size: 1.125rem;
+  font-size: 16px;
   text-align: center;
 }
 
@@ -473,7 +474,7 @@ header {
 }
 
 .directors h2 {
-  font-size: 2.5rem;
+  font-size: 36px;
   text-align: center;
   margin-bottom: 50px;
   font-weight: 700;
@@ -522,7 +523,7 @@ header {
 
 .member-name {
   text-align: center;
-  font-size: 1rem;
+  font-size: 14px;
   line-height: 1.4;
 }
 
@@ -549,13 +550,13 @@ header {
   padding: 30px;
 }
 .affiliates h2 {
-  font-size: 2.5rem;
+  font-size: 36px;
   margin-bottom: 30px;
   font-weight: 700;
 }
 
 .affiliates p {
-  font-size: 1.125rem;
+  font-size: 16px;
   max-width: 1200px;
   margin: 0 auto 50px;
 }
@@ -576,7 +577,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 16px;
   transition: transform 0.3s ease;
 }
 
@@ -602,11 +603,25 @@ header {
   color: #666;
   text-decoration: none;
   margin-right: 20px;
+  font-size: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
   color: #fff;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-links .separator {
+  color: #666;
+  font-size: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .footer-social {
@@ -626,6 +641,8 @@ header {
 .copyright {
   color: #666;
   margin-top: 10px;
+  font-size: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 /* JavaScript helper classes */
@@ -658,14 +675,14 @@ header {
 }
 
 .history-text h2 {
-  font-size: 2.5rem;
+  font-size: 36px;
   margin-bottom: 30px;
   font-weight: 700;
   text-align: center;
 }
 
 .history-text p {
-  font-size: 1.125rem;
+  font-size: 16px;
   max-width: 675px;
   margin: 0 auto;
   text-align: center;
@@ -761,22 +778,72 @@ header {
 }
 
 
-/* Mobile Responsive Styles */
+/* Large Desktop Responsive Styles */
+@media (max-width: 1200px) {
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+  
+  .right-content h2 {
+    font-size: 32px;
+  }
+  
+  .mission-content h3, .vision-content h3 {
+    font-size: 28px;
+  }
+}
+
+/* Medium Desktop Responsive Styles */
 @media (max-width: 1024px) {
   .hero {
-    padding: 120px 0 80px;
+    padding: 100px 0 60px;
   }
   
   .hero-text h1 {
     font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .hero-text p {
+    font-size: 16px;
+  }
+  
+  .who-we-are-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .left-side {
+    width: 100%;
+    min-height: 300px;
+  }
+  
+  .right-side {
+    width: 100%;
+    padding: 40px 30px;
+  }
+  
+  .right-content h2 {
+    font-size: 28px;
+  }
+  
+  .right-content p {
+    font-size: 15px;
   }
   
   .mission-vision-content {
     gap: 30px;
+    flex-direction: column;
+  }
+  
+  .mission-content, .vision-content {
+    width: 100%;
+    padding: 30px;
   }
   
   .violin {
-    margin: 40px 0px 0px 100px; 
+    margin: 40px 0px 0px 50px; 
+    width: 60px;
   }
   
   .round {
@@ -785,6 +852,14 @@ header {
   
   .red-circle-wrapper {
     display: none;
+  }
+  
+  .board-members-row-1 {
+    gap: 30px;
+  }
+  
+  .board-members-row-2 {
+    gap: 30px;
   }
 }
 
@@ -807,11 +882,11 @@ header {
   }
 
   .history-text h2 {
-    font-size: 2rem;
+    font-size: 24px;
   }
 
   .history-text p {
-    font-size: 1rem;
+    font-size: 14px;
   }
 
   .timeline {
@@ -847,6 +922,45 @@ header {
   }
 }
 
+/* Large Tablet Responsive Styles */
+@media (max-width: 900px) {
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+  
+  .directors h2 {
+    font-size: 32px;
+  }
+  
+  .board-members-row-1, .board-members-row-2 {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .member-card {
+    width: 200px;
+    height: 280px;
+  }
+  
+  .member-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .member-name {
+    font-size: 13px;
+  }
+  
+  .mission-content h3, .vision-content h3 {
+    font-size: 24px;
+  }
+  
+  .right-content h2 {
+    font-size: 26px;
+  }
+}
+
 @media (max-width: 768px) {
   /* Mobile Navigation */
   .desktop-nav {
@@ -863,7 +977,7 @@ header {
   }
   
   .hero-text h1 {
-    font-size: 2rem;
+    font-size: 24px;
   }
   
   .hero-text p {
@@ -933,7 +1047,7 @@ header {
   
   /* Directors Section */
   .directors h2 {
-    font-size: 2rem;
+    font-size: 24px;
   }
   
   .board-members-row-1, .board-members-row-2 {
@@ -963,23 +1077,41 @@ header {
   }
 }
 
-@media (max-width: 480px) {
-  .logo img {
-    height: 80px;
+/* Small Tablet / Large Phone Responsive Styles */
+@media (max-width: 650px) {
+  .hero {
+    padding: 60px 0 40px;
   }
   
   .hero-text h1 {
-    font-size: 1.75rem;
+    font-size: 22px;
+    line-height: 1.2;
   }
   
-  .affiliates {
-    padding: 50px 0;
+  .hero-text p {
+    font-size: 13px;
+    padding: 0 10px;
   }
   
-  .right-content h2,
-  .directors h2,
-  .affiliates h2 {
-    font-size: 1.75rem;
+  .left-side {
+    height: 300px;
+    background-size: 60%;
+  }
+  
+  .right-side {
+    padding: 40px 15px;
+  }
+  
+  .right-content h2 {
+    font-size: 22px;
+  }
+  
+  .right-content p {
+    font-size: 13px;
+  }
+  
+  .mission-vision {
+    padding: 60px 20px;
   }
   
   .mission-content, .vision-content {
@@ -987,7 +1119,124 @@ header {
   }
   
   .mission-content h3, .vision-content h3 {
-    font-size: 1.5rem;
+    font-size: 20px;
+  }
+  
+  .mission-content p, .vision-content p {
+    font-size: 13px;
+  }
+  
+  .directors h2 {
+    font-size: 24px;
+  }
+  
+  .board-members-row-1, .board-members-row-2 {
+    gap: 20px;
+  }
+  
+  .member-card {
+    width: 180px;
+    height: 260px;
+  }
+  
+  .member-image {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .member-name {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 70px;
+  }
+  
+  /* Hero Section Mobile Enhancements */
+  .hero {
+    padding: 50px 0 30px;
+  }
+  
+  .hero-text h1 {
+    font-size: 20px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text p {
+    font-size: 12px;
+    margin: 15px 0;
+    padding: 0 10px;
+  }
+  
+  /* Who We Are Mobile Enhancements */
+  .left-side {
+    height: 250px;
+    background-size: 70%;
+    background-position: center;
+  }
+  
+  .right-side {
+    padding: 30px 15px;
+  }
+  
+  .affiliates {
+    padding: 50px 0;
+  }
+  
+  .right-content h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .right-content p {
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+  }
+  
+  .directors h2,
+  .affiliates h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Directors Mobile Enhancements */
+  .directors {
+    padding: 50px 0;
+  }
+  
+  .board-members-row-1, .board-members-row-2 {
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .member-card {
+    width: 160px;
+    height: 240px;
+  }
+  
+  .member-image {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .member-name {
+    font-size: 11px;
+    padding: 8px;
+  }
+  
+  .mission-content, .vision-content {
+    padding: 30px 20px;
+  }
+  
+  .mission-content h3, .vision-content h3 {
+    font-size: 18px;
   }
   
   .member-circle {
