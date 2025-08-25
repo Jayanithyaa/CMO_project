@@ -215,10 +215,10 @@ header {
     align-items: center; 
     position: relative;
     background: url('../assets/images/electric-guitar-still-life\ 1.png') left no-repeat;
-    background-size: 20%; 
+    background-size: 30%; 
     background-position: left; 
-    background-position-y: 60px;
-    background-position-x: 250px;
+    background-position-y: 10px;
+    background-position-x: 100px;
     background-color: #000;
     margin-bottom: 50px;
 }
@@ -294,10 +294,10 @@ header {
     background: 
         url('../assets/images/6524095\ 1.png') no-repeat,
         url('../assets/images/violin-isolated-transparent-background\ 1.png') no-repeat;
-    background-size: 15%, 18%; 
+    background-size: 35%, 35%; 
     background-position: 
-        50px 150px,
-        350px 200px;
+        300px 350px,
+        50px 150px;
 }
 
 .what-we-do-right {
@@ -346,6 +346,37 @@ header {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: normal;
     justify-content: center;
+}
+
+.license-button-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.license-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: 2px solid #000;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: all 0.3s ease;
+    gap: 10px;
+}
+
+.license-btn:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+}
+
+.license-btn img {
+    width: 16px;
+    height: 16px;
 }
 
 /* How It Works Section */
