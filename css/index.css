@@ -104,6 +104,7 @@ header {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
+    font-size: 14px;
     position: relative;
     padding-bottom: 5px;
 }
@@ -187,7 +188,7 @@ header {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     display: block;
     padding: 8px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -233,9 +234,18 @@ header {
 .hero-title {
     font-size: 30px;
     font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.hero-subtitle {
+    font-size: 22px;
+    font-weight: bold;
     margin-bottom: 20px;
     text-align: center;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #fff;
 }
 
 .hero-description {
@@ -270,6 +280,7 @@ header {
     background: linear-gradient(to right, #fff 50%, #000 50%);
     color: #000;
     overflow: hidden;
+    padding: 60px 80px;
 }
 
 .what-we-do h2{
@@ -640,8 +651,12 @@ header {
 }
 
 .about-left img {
-    max-width: 100%;
-    max-height: 500px;
+    max-width: 100% !important;
+    max-height: 600px !important;
+    width: auto !important;
+    height: auto !important;
+    opacity: 1 !important;
+    filter: none !important;
 }
 
 .about-right {
@@ -700,35 +715,60 @@ header {
 footer {
     background-color: #000;
     color: #fff;
-    padding: 20px 0;
-    font-size: 14px;
+    padding: 30px 0;
 }
 
 .footer-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .footer-links a {
-    color: #666666;
+    color: #666;
     text-decoration: none;
     margin-right: 20px;
-    font-family: 'Inter';
+    font-size: 16px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-links .separator {
+    color: #666;
+    font-size: 16px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.footer-social {
+    display: flex;
 }
 
 .footer-social a {
     color: #fff;
     margin-left: 15px;
-    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color:#9D0405;
 }
 
 .copyright {
-    color: #666666;
-    text-decoration: none;
-    margin-right: 20px;
-    font-family: 'Inter';
+    color: #666;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 @media screen and (min-width: 992px) {
@@ -749,8 +789,7 @@ footer {
     }
 
     .ellipse16 {
-            display: none;
-        }
+        display: none;
     }
     
     .what-we-do h2 {
@@ -762,9 +801,23 @@ footer {
     }
     
     .about-left img {
-        max-height: 400px;
+        max-height: 500px !important;
+        opacity: 1 !important;
+        filter: none !important;
     }
-
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-subtitle {
+        font-size: 20px;
+    }
+    
+    .hero-description {
+        font-size: 14px;
+    }
+}
 
 .service-list {
     margin-left: 0;
@@ -797,11 +850,24 @@ footer {
         background-position: center;
         background-size: cover;
         padding-top: 60px;
+        min-height: 90vh;
     }
     
     .hero-content {
         padding-top: 60px;
         max-width: 90%;
+    }
+    
+    .hero-title {
+        font-size: 26px;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .hero-description {
+        font-size: 14px;
     }
     
     .btn {
@@ -816,6 +882,7 @@ footer {
     .what-we-do {
         background: none;
         background-color: #fff;
+        padding: 50px 40px;
     }
     
     .what-we-do-container {
@@ -854,8 +921,6 @@ footer {
         padding-right: 40px;
     }
 
-    
-    
     .how-it-works::before, .how-it-works::after {
         width: 300px;
         height: 300px;
@@ -882,11 +947,32 @@ footer {
         background-color: #fff;
         padding: 50px 20px;
     }
+    
+    .about-left img {
+        max-height: 450px !important;
+    }
+    
+    .about-title {
+        font-size: 30px;
+    }
+    
+    .about-description {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 768px) {
+    .hero {
+        min-height: 85vh;
+        background-size: 70%;
+    }
+    
     .hero-title {
         font-size: 24px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
     }
     
     .hero-description {
@@ -897,12 +983,25 @@ footer {
         display: none;
     }
     
+    .what-we-do {
+        padding: 40px 30px;
+    }
+    
+    .what-we-do h2 {
+        font-size: 22px;
+    }
+    
     .section-title {
         font-size: 24px;
     }
     
     .section-subtitle {
         font-size: 14px;
+    }
+    
+    .how-it-works {
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
     
     .how-it-works::before {
@@ -915,6 +1014,7 @@ footer {
     
     .steps-container {
         flex-direction: column;
+        gap: 30px;
     }
     
     .join-circle {
@@ -941,20 +1041,34 @@ footer {
         right: 55px;
     }
     
+    .about-left, .about-right {
+        padding: 40px 25px;
+    }
+    
+    .about-left img {
+        max-height: 400px !important;
+    }
+    
+    .about-title {
+        font-size: 26px;
+    }
+    
+    .about-description {
+        font-size: 15px;
+    }
+    
     .footer-content {
         flex-direction: column;
         text-align: center;
-        gap: 15px;
     }
     
     .footer-links, .footer-social, .copyright {
-        width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
     
     .footer-links a {
         display: inline-block;
-        margin: 0 10px;
+        margin-bottom: 10px;
     }
 }
 
@@ -973,14 +1087,21 @@ footer {
     
     .hero {
         min-height: 80vh;
+        background-size: 60% !important;
+        background-position: center !important;
     }
     
     .hero-content {
         padding-top: 80px;
+        max-width: 95%;
     }
     
     .hero-title {
         font-size: 20px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
     }
     
     .hero-description {
@@ -993,6 +1114,14 @@ footer {
     }
     
     .section-title {
+        font-size: 20px;
+    }
+    
+    .what-we-do {
+        padding: 40px 20px;
+    }
+    
+    .what-we-do h2 {
         font-size: 20px;
     }
     
@@ -1066,5 +1195,259 @@ footer {
         margin-top: 40px;
         font-size: 12px;
         padding: 4px 8px;
+    }
+    
+    .footer-links a {
+        font-size: 16px;
+    }
+    
+    .footer-links .separator {
+        font-size: 16px;
+    }
+    
+    .copyright {
+        font-size: 16px;
+    }
+}
+
+/* Additional responsive breakpoints for better coverage */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 18px;
+    }
+    
+    .hero-subtitle {
+        font-size: 14px;
+    }
+    
+    .hero-description {
+        font-size: 11px;
+    }
+    
+    .what-we-do h2 {
+        font-size: 18px;
+    }
+    
+    .section-subtitle {
+        font-size: 12px;
+    }
+    
+    .how-it-works-title {
+        font-size: 20px;
+    }
+    
+    .how-it-works-subtitle {
+        font-size: 12px;
+    }
+    
+    .about-title {
+        font-size: 20px;
+    }
+    
+    .about-description {
+        font-size: 12px;
+    }
+    
+    .step-circle {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .step-number {
+        top: 20px;
+        right: 65px;
+        width: 22px;
+        height: 22px;
+        font-size: 11px;
+    }
+    
+    .join-circle {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .OIP-image {
+        top: 90px;
+        width: 120px;
+    }
+    
+    .service-item, .service-item-left {
+        margin-bottom: 20px;
+    }
+    
+    .circle-icon, .service-icon {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .hero {
+        min-height: 70vh;
+    }
+    
+    .hero-content {
+        padding-top: 60px;
+    }
+    
+    .hero-title {
+        font-size: 16px;
+    }
+    
+    .hero-subtitle {
+        font-size: 12px;
+    }
+    
+    .hero-description {
+        font-size: 10px;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    
+    .what-we-do {
+        padding: 30px 15px;
+    }
+    
+    .what-we-do h2 {
+        font-size: 16px;
+    }
+    
+    .how-it-works {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+    .how-it-works-title {
+        font-size: 18px;
+    }
+    
+    .how-it-works-subtitle {
+        font-size: 11px;
+    }
+    
+    .about {
+        min-height: auto;
+    }
+    
+    .about-left, .about-right {
+        padding: 30px 15px;
+    }
+    
+    .about-title {
+        font-size: 18px;
+    }
+    
+    .about-description {
+        font-size: 11px;
+    }
+    
+    .about-btn {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+    
+    .step-circle {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .step-number {
+        top: 15px;
+        right: 55px;
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
+    
+    .join-circle {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .OIP-image {
+        top: 80px;
+        width: 100px;
+    }
+    
+    .steps-btn {
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+    
+    .footer-links a {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-links .separator {
+        font-size: 16px;
+    }
+    
+    .copyright {
+        font-size: 16px;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding-top: 20px;
+    }
+    
+    .hero-content {
+        padding-top: 40px;
+    }
+    
+    .about {
+        min-height: 100vh;
+    }
+    
+    .about-left, .about-right {
+        padding: 20px;
+    }
+    
+    .about-left img {
+        max-height: 400px !important;
+    }
+}
+
+/* High-resolution displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero {
+        background-size: 35%;
+    }
+    
+    .about-left img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print styles */
+@media print {
+    .hero::before {
+        display: none;
+    }
+    
+    .mobile-menu-toggle,
+    .mobile-sidebar {
+        display: none !important;
+    }
+    
+    .btn,
+    .about-btn,
+    .steps-btn {
+        border: 1px solid #000;
+        background: none !important;
+        color: #000 !important;
     }
 }

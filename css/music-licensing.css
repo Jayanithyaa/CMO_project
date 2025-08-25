@@ -112,6 +112,7 @@ header {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
+    font-size: 14px;
     position: relative;
     padding-bottom: 5px;
 }
@@ -196,7 +197,7 @@ header {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     display: block;
     padding: 8px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -213,11 +214,12 @@ header {
     justify-content: center;
     align-items: center; 
     position: relative;
-    background: url('../assets/images/young-female-singer-red-dress\ 1.png') left no-repeat;
+    background: url('../assets/images/electric-guitar-still-life\ 1.png') left no-repeat;
     background-size: 20%; 
     background-position: left; 
     background-position-y: 60px;
     background-position-x: 250px;
+    background-color: #000;
     margin-bottom: 50px;
 }
 
@@ -289,11 +291,13 @@ header {
     padding: 60px 0px 60px 0px;
     justify-content: center;
     align-items: right;
-    background: url('../assets/images/electric-guitar-still-life\ 1.png') left no-repeat;
-    background-size: 20%; 
-    background-position: left; 
-    background-position-y: 60px;
-    background-position-x: 250px;
+    background: 
+        url('../assets/images/6524095\ 1.png') no-repeat,
+        url('../assets/images/violin-isolated-transparent-background\ 1.png') no-repeat;
+    background-size: 15%, 18%; 
+    background-position: 
+        50px 150px,
+        350px 200px;
 }
 
 .what-we-do-right {
@@ -622,10 +626,28 @@ footer {
 }
 
 .footer-links a {
-    color: #666666;
+    color: #666;
     text-decoration: none;
     margin-right: 20px;
-    font-family: 'Inter';
+    font-size: 16px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-links .separator {
+    color: #666;
+    font-size: 16px;
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .footer-social a {
@@ -635,10 +657,10 @@ footer {
 }
 
 .copyright {
-    color: #666666;
-    text-decoration: none;
-    margin-right: 20px;
-    font-family: 'Inter';
+    color: #666;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 @media screen and (min-width: 992px) {
